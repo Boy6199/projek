@@ -1,0 +1,1470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+    :root {
+      --my-color: #cd2d2d;
+      --gray-color: #f1f1f1;
+      --animate-duration: 200ms;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: white;
+      user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      padding: 0;
+      margin: 0;
+      animation: fade-in 1s linear;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    #header {
+      background: var(--my-color);
+      padding: 10px;
+    }
+
+    .icon-nav img {
+      width: 25px;
+    }
+
+    .logo {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+
+    .refresh img {
+      width: 22px;
+    }
+
+    .my-bg {
+      background: var(--my-color);
+    }
+
+    .my-bg p {
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      margin: 0px;
+    }
+
+    .list-border {
+      border-bottom: 1px solid #ccc;
+      padding: 16px 0;
+    }
+
+    .list-border p {
+      margin: 0px;
+      color: black;
+      font-size: 15px;
+    }
+
+    .my-top {
+      background: var(--my-color);
+      padding: 10px;
+      border-radius: 0px 0px 35px 35px;
+    }
+
+    .foto-profil {
+      width: 60px;
+      padding: 5px;
+      border-radius: 100px;
+      background: var(--gray-color);
+    }
+
+    .grid3 {
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    .grid4 {
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      max-width: 100%;
+    }
+
+    .caption {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+
+    .white-change {
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(308deg) brightness(103%) contrast(104%);
+    }
+
+    .top-menu {
+      text-align: center;
+    }
+
+    .top-menu img {
+      width: 33px;
+    }
+
+    .top-menu p {
+      font-size: 14px !important;
+      font-weight: 700;
+      color: white;
+      margin-top: 5px;
+    }
+
+    .tab {
+      overflow: hidden;
+      list-style: none;
+      margin: 0;
+      padding: 2px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      max-width: 100%;
+      text-align: center;
+      align-items: center;
+      margin-top: 18px;
+
+    }
+
+    .tab button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      background: var(--my-color);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: 15px;
+      text-align: center;
+      width: 90%;
+      margin-bottom: 35px;
+    }
+
+    .tab img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 100;
+    }
+
+    .tab button p {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 7px;
+      margin-top: 7px;
+      font-weight: 700;
+    }
+
+    .w-bg {
+      background: white;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 5px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .tab button.active img {
+      filter: invert(26%) sepia(76%) saturate(2207%) hue-rotate(344deg) brightness(85%) contrast(89%);
+      position: relative;
+      z-index: 100;
+      width: 100%;
+      height: 100%;
+    }
+
+    .my-box {
+      background: white;
+      padding: 10px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: 10px;
+      position: relative;
+      top: -75px;
+      padding-top: 20px;
+    }
+
+    .tabcontent {
+      display: none;
+
+    }
+
+    .borders {
+      width: 60px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      backdrop-filter: blur(6.1px);
+      -webkit-backdrop-filter: blur(6.1px);
+      padding: 4px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .game {
+      text-align: center;
+      background: transparent;
+    }
+
+    .game img {
+      width: 45px;
+      border-radius: 8px;
+    }
+
+    .game p {
+      font-size: 12px !important;
+      margin-top: 4px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .swiper-wrapper,
+    .swiper-container {
+      z-index: 1;
+      display: flex;
+    }
+
+    .swiper-slider-center {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .list-border {
+      border-bottom: 1px solid #ccc;
+      padding: 16px 0;
+    }
+
+    .scroll-menu {
+      clear: both;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding: 16px 8px;
+    }
+
+    .scroll-menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-block {
+      display: inline-block;
+      margin: 0 8px;
+      width: 30%;
+    }
+
+    .borad-5 {
+      border-radius: 5px
+    }
+
+    .borad-10 {
+      border-radius: 10px
+    }
+
+    .borad-15 {
+      border-radius: 15px
+    }
+
+    .my-shadow {
+      box-shadow: rgba(0, 0, 0, 0.15) 0 0 5px 1px;
+    }
+
+    .bg-white {
+      background-color: #fff !important
+    }
+
+    .text-white {
+      color: #fff
+    }
+
+    .f-8 {
+      font-size: 8px !important
+    }
+
+    .f-9 {
+      font-size: 9px !important
+    }
+
+    .f-10 {
+      font-size: 10px !important
+    }
+
+    .f-11 {
+      font-size: 11px !important
+    }
+
+    .f-12 {
+      font-size: 12px !important
+    }
+
+    .f-14 {
+      font-size: 14px !important
+    }
+
+    .f-16 {
+      font-size: 16px !important
+    }
+
+    .f-18 {
+      font-size: 18px !important
+    }
+
+    .f-20 {
+      font-size: 20px !important
+    }
+
+    .f-22 {
+      font-size: 22px !important
+    }
+
+    .f-24 {
+      font-size: 24px !important
+    }
+
+    .f-26 {
+      font-size: 26px !important
+    }
+
+    .f-28 {
+      font-size: 28px !important
+    }
+
+    .fwb-5 {
+      font-weight: 500
+    }
+
+    .fwb-6 {
+      font-weight: 600
+    }
+
+    .op-7 {
+      opacity: 0.7
+    }
+
+    .d-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .d-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .d-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .app-panel {
+      text-align: center;
+    }
+
+    .app-panel img {
+      padding: 4px;
+      width: 35px;
+      border-radius: 5px;
+      background-color: #cd2d2d;
+    }
+
+    .app-panel p {
+      color: #cd2d2d;
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    .app-list {
+      text-align: center;
+    }
+
+    .app-list img {
+      padding: 4px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #cd2d2d23;
+    }
+
+    .app-list p {
+      font-size: 11px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .swiper-wrapper,
+    .swiper-container {
+      z-index: 1;
+      display: flex;
+    }
+
+    .swiper-slider-center {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .list-border {
+      border-bottom: 1px solid #ccc;
+      padding: 16px 0;
+    }
+
+    .scroll-menu {
+      clear: both;
+      white-space: nowrap;
+      overflow-x: auto;
+      padding: 16px 8px;
+    }
+
+    .scroll-menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-block {
+      display: inline-block;
+      margin: 0 8px;
+      width: 30%;
+    }
+
+    .text-top-block {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* word-break: break-all; */
+      white-space: break-spaces;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 2.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 12px
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="header" class="sticky-top d-flex align-items-center">
+    <div class="icon-nav">
+      <img src="https://cdn-icons-png.flaticon.com/128/2099/2099153.png" alt="" class="white-change"
+        data-bs-toggle="offcanvas" data-bs-target="#sideCanv" aria-controls="sideCanv">
+    </div>
+    <div class="logo">
+      <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231115_153933_0000.png" alt="">
+    </div>
+    <div class="refresh" onclick="Refresh()">
+      <img src="https://cdn-icons-png.flaticon.com/128/25/25429.png" alt="" class="white-change">
+    </div>
+  </div>
+
+
+<div class="my-top2">
+  <div class="my-top py-3">
+    <center>
+      <img
+        src="https://assets-a1.kompasiana.com/items/album/2021/03/24/blank-profile-picture-973460-1280-605aadc08ede4874e1153a12.png"
+        alt="" class="foto-profil">
+    </center>
+
+    <div class="grid3">
+      <a href="https://waroengppob.bukaolshop.site/digital/248509">
+        <div class="top-menu">
+          <img src="https://cdn-icons-png.flaticon.com/128/7544/7544595.png" alt="" class="white-change">
+          <p id="my_saldo">{{saldo_user}}</p>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="top-menu">
+          <img src="https://cdn-icons-png.flaticon.com/128/61/61483.png" alt="" class="white-change">
+          <p>{{poin_member}} Poin</p>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="top-menu">
+          <img src="https://cdn-icons-png.flaticon.com/128/9573/9573491.png" alt="" class="white-change">
+          <p>Voucher</p>
+        </div>
+      </a>
+    </div>
+
+
+
+    <!-- Menu Tab -->
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Panduan')">
+        <center>
+          <p>Panduan</p>
+          <div class="borders">
+            <div class="w-bg">
+              <img src="https://cdn-icons-png.flaticon.com/128/25/25333.png" alt="">
+            </div>
+          </div>
+        </center>
+      </button>
+
+      <button class="tablinks active" onclick="openCity(event, 'Game')">
+        <center>
+          <p>Game</p>
+          <div class="borders">
+            <div class="w-bg">
+              <img src="https://cdn-icons-png.flaticon.com/128/2728/2728800.png" alt="">
+            </div>
+          </div>
+        </center>
+      </button>
+
+      <button class="tablinks" onclick="openCity(event, 'Ppob')">
+        <center>
+          <p>PPOB</p>
+          <div class="borders">
+            <div class="w-bg">
+              <img src="https://cdn-icons-png.flaticon.com/128/9048/9048633.png" alt="">
+            </div>
+          </div>
+        </center>
+      </button>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+  <!-- PANDUAN -->
+  <div class="container">
+    <div id="Panduan" class="tabcontent">
+      <div class="my-box">
+        <div class="caption">Panduan</div>
+        <div class="grid4">
+          <a href="https://wa.link/jm7nzk">
+            <div class="game">
+              <img src="https://cdn-icons-png.flaticon.com/128/3249/3249904.png" alt="">
+              <p class="name">Butuh Bantuan?</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- GAME -->
+  <div class="container">
+    <div id="Game" class="tabcontent" style="display: block;">
+      <div class="my-box">
+        <div class="caption">Top Up</div>
+        <div id="hideone">
+        <div class="grid4">
+          <a href="https://waroengppob.bukaolshop.site/digital/242507">
+            <div class="game">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/higgsdomino-1.webp" alt="">
+              <p class="name">Higgs Domino</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242547">
+
+
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/MobileLegends.png" alt="">
+              <p class="name">Mobile Legends</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242543">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/FreeFire.png" alt="">
+              <p class="name">Free Fire</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242569">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/PubgMobile.png" alt="">
+              <p class="name">Pubg Mobile</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242634">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/07/images-2023-07-29t063449.153.jpeg" alt="">
+              <p class="name">Royal Domino</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242551">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/CallOfDuty.png" alt="">
+              <p class="name">Call Of Duty</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/MetalSlugAwakening.png" alt="">
+              <p class="name">Garena Undawn</p>
+            </div>
+          </a>
+
+
+          <a href="#">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-19t051547.318.jpeg" alt="">
+              <p class="name">FC Mobile</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242639">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t133420.422.jpeg" alt="">
+              <p class="name">Bos Domino</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/Sausageman.png" alt="">
+              <p class="name">Sausageman</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242681">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/GenshinImpact.png" alt="">
+              <p class="name">Genshin Impact</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/03/aov.jpg" alt="">
+              <p class="name">ArenaOfValor</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/245117">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-26t172415.483.jpeg" alt="">
+              <p class="name">Domino Bearfish</p>
+            </div>
+          </a>
+
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242687">
+            <div class="game">
+              <img
+                src="https://codingasikgame.files.wordpress.com/2022/11/customer-support-flat-illustration_23-2148892786.webp"
+                alt="">
+              <p class="name">Life After</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242652">
+            <div class="game">
+              <img src="https://codingasik.my.id/icon/Game/LordMobile.png" alt="">
+              <p class="name">Lord Mobile</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242647">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/08/ragnarokm.png" alt="">
+              <p class="name">Ragnarok Mobile</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242910">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/09/metalslugawakening.webp" alt="">
+              <p class="name">MetalSlug Awakening</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/243719">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/09/marvelsuperwar.jpg" alt="">
+              <p class="name">Marvel Super War</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242677">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t135305.540.jpeg" alt="">
+              <p class="name">Rules Of Survival</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/09/opm.jpg" alt="">
+              <p class="name">One Punch Man</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242645">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/08/unnamed-1.png" alt="">
+              <p class="name">Hago</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/09/unnamed-5.png" alt="">
+              <p class="name">Dragon Raja</p>
+            </div>
+          </a>
+
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/09/honkaiimpact.png" alt="">
+              <p class="name">Honkai Impact</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://codingasikgame.files.wordpress.com/2023/08/8-ball-pool-2021-08-05.jpg" alt="">
+              <p class="name">8 Ball Pool</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img
+                src="https://static.vecteezy.com/system/resources/thumbnails/024/983/597/small/valorant-logo-transparent-free-png.png"
+                alt="">
+              <p class="name">Valorant</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img
+                src="https://codingasikgame.files.wordpress.com/2023/09/1571814027-icon-1559011491-icon-1557743544-icon-point_blank.jpg"
+                alt="">
+              <p class="name">Point Blank</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://imgs2.dab3games.com/super-sus-who-is-impostor-game47.png" alt="">
+              <p class="name">Supersus</p>
+            </div>
+          </a>
+
+          <a href="https://waroengppob.bukaolshop.site/digital/242675">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t134152.013.jpeg" alt="">
+              <p class="name">Poker Texas Boyaa</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t134533.414.jpeg" alt="">
+              <p class="name">Dragon Nest Evolution</p>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="game">
+              <img src="https://esports.id/img/article/873920191021042955.jpg" alt="">
+              <p class="name">LOL Wild Drift</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+
+
+      <!-- Voucher  -->
+      <div class="my-box mt-3">
+
+
+        <div class="caption mt-0">Voucher Game</div>
+        <div class="grid4">
+          <a href="https://waroengppob.bukaolshop.site/digital/242646">
+            <div class="app-list">
+              <img src="https://static.vecteezy.com/system/resources/previews/017/396/800/original/google-play-store-mobile-apps-logo-free-png.png">
+              <p>V.GooglePlay</p>
+            </div>
+          </a>
+          <a href="https://waroengppob.bukaolshop.site/digital/242728">
+            <div class="app-list">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t141817.041.jpeg">
+              <p>V.Unipin</p>
+            </div>
+          </a>
+          <a href="https://waroengppob.bukaolshop.site/digital/242709">
+            <div class="app-list">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images-2023-10-14t141312.278.jpeg">
+              <p>Steam wallet</p>
+            </div>
+          </a>
+          <a href="https://waroengppob.bukaolshop.site/digital/245014">
+            <div class="app-list">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/images284229.png">
+              <p>Garena Shell</p>
+            </div>
+          </a>
+          
+         <a href="https://#">
+            <div class="app-list">
+              <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/rg.jpeg">
+              <p>Razer Gold</p>
+            </div>
+          </a>
+          
+        </div>
+
+
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- PPOB -->
+    <div class="container">
+      <div id="Ppob" class="tabcontent" style="box-shadow: none;">
+        <div class="my-box">
+          <div class="caption">PPOB</div>
+          <div class="grid4">
+            <a href="https://waroengppob.bukaolshop.site/digital/242539">
+              <div class="game">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_080833_0000.png">
+                <p>Pulsa</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/233336">
+              <div class="game">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_080801_0000.png">
+                <p>Paket Data</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/246381">
+              <div class="game">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_080634_0000.png">
+                <p>SMS &amp; Tlp</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/242575">
+              <div class="game">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_080950_0000.png">
+                <p>Token Pln</p>
+              </div>
+
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/217993">
+              <div class="game">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_081326_0000.png">
+                <p>Vcr Data</p>
+              </div>
+
+              <a href="https://waroengppob.bukaolshop.site/digital/231913">
+                <div class="game">
+                  <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_080801_0000.png">
+                  <p>Inject Vcr</p>
+                </div>
+              </a>
+
+              <a href="https://waroengppob.bukaolshop.site/digital/245010">
+                <div class="game">
+                  <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_082043_0000.png">
+                  <p>Streaming</p>
+                </div>
+              </a>
+
+
+              <a href="https://waroengppob.bukaolshop.site/digital/245010">
+                <div class="game">
+                  <img src="https://higgsdominoshopp.files.wordpress.com/2023/11/20231107_082043_0000.png">
+                  <p>Wifi ID</p>
+                </div>
+              </a>
+
+
+              <a href="https://waroengppob.bukaolshop.site/digital/244282">
+                <div class="game">
+                  <img src="https://nielz.my.id/assets/images/milenial/telkomsel.png">
+                  <p>Tsel Omni</p>
+                </div>
+              </a>
+
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/196230">
+              <div class="game">
+                <img src="https://nielz.my.id/assets/images/milenial/e-toll.png">
+                <p>E-Toll</p>
+              </div>
+            </a>
+
+            <a href="https://codingasik.my.id/BukaOlshop/Tools/Tutorial.php">
+              <div class="game">
+                <img src="https://nielz.my.id/assets/images/milenial/pesawat.png">
+                <p>Tiket Pesawat</p>
+              </div>
+            </a>
+
+            <a href="https://waroengppob.bukaolshop.site/digital/242587">
+              <div class="game">
+                <img src="https://nielz.my.id/assets/images/milenial/ewalet.png">
+                <p>E-Wallet</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+
+        <!-- Pascabayar -->
+        <div class="my-box mt-3">
+          <div class="caption mt-0">Pascabayar</div>
+          <div class="grid4">
+            <a href="https://waroengppob.bukaolshop.site/digital/242771">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231022_064856_0000.png">
+                <p>TV Pasca</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/245011">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231022_061025_0000.png">
+                <p>PLN Pasca</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/196066">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231022_061344_0000.png">
+                <p>Pdam</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/245014">
+              <div class="app-list">
+                <img src="https://nielz.my.id/assets/images/milenial/bpjs.png">
+                <p>BPJS </p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/244150">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231022_060506_0000.png">
+                <p>HP Pasca</p>
+              </div>
+            </a>
+            <a href="https://waroengppob.bukaolshop.site/digital/241740">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231022_060319_0000.png" class="p-2">
+                <p>Multifinance</p>
+              </div>
+            </a>
+
+            <a href="https://waroengppob.bukaolshop.site/digital/245018">
+              <div class="app-list">
+                <img src="https://higgsdominoshopp.files.wordpress.com/2023/10/20231025_234357_0000.png">
+                <p>Samsat</p>
+              </div>
+            </a>
+
+            <a href="https://waroengppob.bukaolshop.site/digital/244148">
+              <div class="app-list">
+                <img src="https://i.ibb.co/KGy4tJh/20230319-142548.png" class="p-2">
+                <p>Internet Pasca</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- MENU SAMPING -->
+    <section class="offcanvas offcanvas-start w-75" tabindex="-1" id="sideCanv" aria-labelledby="sideCanv">
+      <div class="p-3 my-bg">
+        <p class="f-16 text-white">MENU LAIN</p>
+      </div>
+
+      <div class="offcanvas-body py-0">
+        <div class="list-border">
+          <a href="https://wa.link/jm7nzk">
+            <p class="fwb-6 f-16">Pusat Bantuan</p>
+          </a>
+        </div>
+
+        <div class="list-border">
+          <a href="https://waroengppob.bukaolshop.site/digital/246953">
+            <p class="fwb-6 f-16">Video Panduan</p>
+          </a>
+        </div>
+
+
+        <div class="list-border">
+          <a href="https://chat.whatsapp.com/CSpk2qwaRwl1wdOsZWI7Tf">
+            <p class="fwb-6 f-16">Grup WhatsApp</p>
+          </a>
+        </div>
+        <div class="list-border">
+          <a href="#">
+            <p class="fwb-6 f-16">Tiktok Oficial</p>
+          </a>
+        </div>
+        <div class="list-border">
+          <a href="https://youtube.co">
+            <p class="fwb-6 f-16">Youtube Official</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- BANNER -->
+    <section class="py-3" style="margin-top: -67px;">
+      <div class="swiper-container swiper-slider-center">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://087882444486design.files.wordpress.com/2023/11/20231112_075630_0000-1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://087882444486design.files.wordpress.com/2023/11/20231112_063625_0000-1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://087882444486design.files.wordpress.com/2023/11/super_20231112_114946_0000-1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://087882444486design.files.wordpress.com/2023/11/20231112_102430_0000-1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://087882444486design.files.wordpress.com/2023/11/20231112_122250_0000-1-1.png">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-3" style="border-top: 4px solid #EDF1FC;">
+      <div class="d-flex justify-content-between align-items-center px-3">
+        <p class="f-16 fwb-6">Flash Sale</p>
+        <div class="my-bg borad-5 py-1 px-2" id="flashSale">
+          <p class="text-white text-center">Loading...</p>
+        </div>
+      </div>
+
+      <div class="scroll-menu">
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/samsung-s22-ultra-5g-12-512-12-256-2225643">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/id-11134207-7r98r-ln8ak32scjx3af-1.webp"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">Samsung S22 ultra 5G Second</p>
+                <s class="f-10">Rp.10.387.000</s>
+                <p class="my-color fwb-6 f-12">10.999.999</p>
+                <p class="f-10 fwb-6 op-7 mt-1">1 Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/akun-shopee-termasuk-gratis-ongkir-2029212">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/930624835w-1.jpg" class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">Akun TOK untuk Jualan Shopee</p>
+                <s class="f-12">5.000.000</s>
+                <p class="my-color fwb-6 f-12">4.959.000</p>
+                <p class="f-10 fwb-6 op-7 mt-1">19 Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/250b-chip-kuning-premium-2230715">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_181530_0000-1.png"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">250B Chip Kuning HDI Premium</p>
+                <s class="f-12">15.000.000</s>
+                <p class="my-color fwb-6 f-12">13.250.000</p>
+                <p class="f-10 fwb-6 op-7 mt-1">93 Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/50b-chip-kuning-promo-1725143">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_181530_0000-1.png"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">50B Chip Kuning Promo</p>
+                <s class="f-12">3.000.0000</s>
+                <p class="my-color fwb-6 f-12">2.799.999</p>
+                <p class="f-10 fwb-6 op-7 mt-1">299Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/akun-youtube-monet-2181253">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_181530_0000-1.png"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">Akun Yt monet murah</p>
+                <s class="f-12">Rp. 5.000.000</s>
+                <p class="my-color fwb-6 f-12">Rp.4.798.000</p>
+                <p class="f-10 fwb-6 op-7 mt-1">2 Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/1b-koin-md-1955315">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_181530_0000-1.png"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">1B Chip Ungu Proses detikan</p>
+                <s class="f-12">Rp. 70.000</s>
+                <p class="my-color fwb-6 f-12">Rp.68.900</p>
+                <p class="f-10 fwb-6 op-7 mt-1">117rb Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/produk/10b-chip-kuning-hdi-super-promo-2196172">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_181530_0000-1.png"
+                class="w-100">
+              <div class="p-2">
+                <p class="fwb-6 text-top-block ">10B Chip Kuning Promo</p>
+                <s class="f-12">Rp.650.000</s>
+                <p class="my-color fwb-6 f-12">Rp.550.000</p>
+                <p class="f-10 fwb-6 op-7 mt-1">79Terjual</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="pt-3" style="border-top: 4px solid #EDF1FC;">
+      <div class="d-flex justify-content-between align-items-center px-3">
+        <p class="f-16 fwb-6">TukarPoin</p>
+        <a href="#" class="my-color f-16">Lihat Semua</a>
+      </div>
+
+      <div class="scroll-menu">
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="https://waroengppob.bukaolshop.site/digital/245682">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_182059_0000-1.png" class="w-100"
+                style="border-radius: 5px 5px  0 0 ;">
+              <div class="p-2 my-bg" style="border-radius: 0 0 5px 5px;">
+                <p class="fwb-6 text-white text-center">700 Poin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="#">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_182510_0000-1.png" class="w-100"
+                style="border-radius: 5px 5px  0 0 ;">
+              <div class="p-2 my-bg" style="border-radius: 0 0 5px 5px;">
+                <p class="fwb-6 text-white text-center">170.000 Poin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="scroll-block">
+          <div class="my-shadow borad-5">
+            <a href="#">
+              <img src="https://087882444486design.files.wordpress.com/2023/11/20230915_182933_0001-1.png" class="w-100"
+                style="border-radius: 5px 5px  0 0 ;">
+              <div class="p-2 my-bg" style="border-radius: 0 0 5px 5px;">
+                <p class="fwb-6 text-white text-center">200.000 Poin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script type="text/javascript" charset="utf-8">
+      function codingasikhidden() {
+        let hiddenEmails = ["testing.email@gmail.com", "mandagiky@gmail.com", "testing.email3@gmail.com"]; // Isi dengan alamat email yang ingin di-hide
+    
+        let emailBo = "{{email_user}}";
+        let konten = document.getElementById("hideone");
+    
+        if (hiddenEmails.includes(emailBo)) {
+          konten.style = "display:none";
+        } else {
+          konten.style = "display:block";
+        }
+      }
+    
+      codingasikhidden();
+    </script>
+    <script type="text/javascript" src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+    <script>
+      var servUrl = "https://waroengppob.bukaolshop.site"
+
+      function Refresh() {
+        window.location.href = servUrl + "/refresh_saldo"
+      }
+      function rubah(angka) {
+        var reverse = angka.toString().split('').reverse().join(''),
+          ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp" + ribuan;
+      }
+      document.getElementById("my_saldo").innerText = rubah(document.getElementById("my_saldo").textContent);
+    </script>
+    <script>
+      window.onscroll = function () { scrollFunction() };
+      function scrollFunction() {
+        var header = document.getElementById("header");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          header.style.backgroundColor = "#cd2d2d";
+          header.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.5)";
+        } else {
+          header.style.backgroundColor = "#cd2d2d";
+          header.style.boxShadow = "none";
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      var _0x12cd7c = _0x3a7d;
+      (function (a, b) {
+        var c = _0x3a7d,
+          _0x5c5777 = a();
+        while (!![]) {
+          try {
+            var d = parseInt(c(0xf1)) / 0x1 * (-parseInt(c(0xf0)) / 0x2) + parseInt(c(0x101)) / 0x3 + -parseInt(c(0xfa)) / 0x4 + parseInt(c(0xf7)) / 0x5 + parseInt(c(0xf4)) / 0x6 + -parseInt(c(0xfd)) / 0x7 * (-parseInt(c(0xf6)) / 0x8) + -parseInt(c(0xea)) / 0x9;
+            if (d === b) break;
+            else _0x5c5777['push'](_0x5c5777['shift']())
+          } catch (_0x1696dc) {
+            _0x5c5777['push'](_0x5c5777['shift']())
+          }
+        }
+      }(_0x2530, 0xcaca5));
+      var swiper = new Swiper(_0x12cd7c(0x102), {
+        'slidesPerView': 1.1,
+        'centeredSlides': !![],
+        'loop': !![],
+        'spaceBetween': 0xa,
+        'slideToClickedSlide': !![],
+        'autoplay': {
+          'delay': 0x1388,
+          'disableOnInteraction': ![]
+        },
+        'pagination': {
+          'el': _0x12cd7c(0xf8),
+          'clickable': !![]
+        }
+      });
+
+      function _0x2530() {
+        var a = ['flex', '8337534WYONNp', 'value', '40016eQNyyt', '7414220BCSNig', '.swiper-pagination', 'join', '445608ivdcEw', 'toUpperCase', 'addEventListener', '945QBreed', 'reverse', 'toString', 'style', '2136087RZSwlu', '.swiper-container', 'display', 'getElementById', 'split', 'length', 'indexOf', '28658079cSbvvM', 'innerHTML', 'innerText', 'name', 'saldo_user', 'profile', '53388DRshuj', '5yKYuTs', 'none'];
+        _0x2530 = function () {
+          return a
+        };
+        return _0x2530()
+      }
+
+      function _0x3a7d(d, e) {
+        var f = _0x2530();
+        return _0x3a7d = function (a, b) {
+          a = a - 0xe9;
+          var c = f[a];
+          return c
+        }, _0x3a7d(d, e)
+      }
+    </script>
+    <script type="text/javascript">
+      cekMember()
+      function cekMember() {
+        var hide = "Dummy"
+        var user = "{{nama_membership}}"
+        if (user == hide) {
+          $(".hide-menu").addClass("d-none")
+        }
+      }
+
+      // FLASH SALE
+      const tanggal = '2024-08-30' // tanggal flash sale
+      const jam = '23:59:59' // waktu berakhir flash sale
+
+      const displayCountDown = (jam, menit, detik) => {
+        return (`
+              <div class="d-grid-3 text-white">
+              <div class="text-center" style="line-height: 16px;">
+              <p class="fwb-6">${jam}</p>
+              <p>Jam</p>
+              </div>
+              <div class="text-center" style="line-height: 16px;">
+              <p class="fwb-6">${menit}</p>
+              <p>Menit</p>
+              </div>
+              <div class="text-center" style="line-height: 16px;">
+              <p class="fwb-6">${detik}</p>
+              <p>Detik</p>
+              </div>
+              </div>
+              `);
+      }
+
+      function countDown() {
+        var countDownDate = Date.parse(tanggal + "T" + jam + "+07:00");
+        var x = setInterval(function () {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          hours = (hours < 10) ? "0" + hours : hours;
+          minutes = (minutes < 10) ? "0" + minutes : minutes;
+          seconds = (seconds < 10) ? "0" + seconds : seconds;
+          $("#flashSale").html(displayCountDown(hours, minutes, seconds))
+          if (distance < 0) {
+            clearInterval(x);
+            $("#flashSale").html("Flashsale Berakhir!");
+          }
+        }, 1000);
+      }
+      countDown()
+    </script>
+
+</body>
+
+</html>
